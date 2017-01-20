@@ -2,12 +2,13 @@
   "name": "dot-finder",
   "version": "0.0.1",
   "description": "dot-finder is using powerful dot notation to get values in JSON object",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "watch": "npm run test:unit -- -w",
+    "build": "babel -d lib/ src/",
     "test": "npm run test:lint && npm run test:unit",
     "test:lint": "eslint --no-ignore *.js .eslintrc.js",
-    "test:unit": "mocha test.js"
+    "test:unit": "mocha --recursive --compilers js:babel-register",
+    "prepublish": "npm run build"
   },
   "engines": {
     "node": ">=4.0.0"
@@ -37,10 +38,22 @@
   },
   "homepage": "https://github.com/tsuyoshiwada/dot-finder#readme",
   "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-power-assert": "^1.0.0",
+    "babel-preset-stage-1": "^6.22.0",
+    "babel-register": "^6.22.0",
     "eslint": "^3.13.1",
-    "mocha": "^3.2.0"
+    "eslint-plugin-babel": "^4.0.1",
+    "mocha": "^3.2.0",
+    "power-assert": "^1.4.2"
   },
   "dependencies": {
     "is-obj": "^1.0.1"
-  }
+  },
+  "files": [
+    "lib",
+    "test"
+  ]
 }

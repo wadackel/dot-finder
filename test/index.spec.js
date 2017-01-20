@@ -1,5 +1,5 @@
 const assert = require("assert");
-const dot = require("./");
+const dot = require("../src/");
 
 
 const sampleData = {
