@@ -1,0 +1,46 @@
+{
+  "name": "dot-finder",
+  "version": "0.0.1",
+  "description": "dot-finder is using powerful dot notation to get values in JSON object",
+  "main": "index.js",
+  "scripts": {
+    "watch": "npm run test:unit -- -w",
+    "test": "npm run test:lint && npm run test:unit",
+    "test:lint": "eslint --no-ignore *.js .eslintrc.js",
+    "test:unit": "mocha test.js"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsuyoshiwada/dot-finder.git"
+  },
+  "keywords": [
+    "obj",
+    "object",
+    "arr",
+    "array",
+    "prop",
+    "property",
+    "dot",
+    "path",
+    "get",
+    "access",
+    "notation",
+    "dotty"
+  ],
+  "author": "tsuyoshiwada",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tsuyoshiwada/dot-finder/issues"
+  },
+  "homepage": "https://github.com/tsuyoshiwada/dot-finder#readme",
+  "devDependencies": {
+    "eslint": "^3.13.1",
+    "mocha": "^3.2.0"
+  },
+  "dependencies": {
+    "is-obj": "^1.0.1"
+  }
+}
